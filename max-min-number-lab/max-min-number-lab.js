@@ -5,6 +5,9 @@ exports.findMinMax = function(arr) {
 	  var sortArr = arr.sort(function(a, b){return a-b});
 	  n = arr.length - 1;
 	  var arrMinMax = [];
+	  if(arr.length === 0) {
+	      return 0;
+       }
 	  if (sortArr[0] === sortArr[n]) {
 		 arrMinMax.push(sortArr[0]) 
 	  }else{

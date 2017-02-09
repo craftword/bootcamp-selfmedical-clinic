@@ -19,6 +19,10 @@ var app = require("../max-min-number-lab/max-min-number-lab.js");
       it('should return [2, 78] for [4, 66, 6, 44, 7, 78, 8, 68, 2]', function () {
         expect(app.findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).toEqual([2, 78]);
       });
+	  it('should return 0 for []', function () {
+        expect(app.findMinMax([])).toEqual(0);
+      });
+
 
     });
 
@@ -29,6 +33,7 @@ var app = require("../max-min-number-lab/max-min-number-lab.js");
       });
 
     });
+  
   describe("Return invalid argument when a non-array argument is pass", function() {
 
       it("should return `Invalid Argument` for 'string'", function() {
