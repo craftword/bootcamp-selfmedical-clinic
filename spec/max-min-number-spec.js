@@ -22,7 +22,9 @@ var app = require("../max-min-number-lab/max-min-number-lab.js");
 	  it('should return 0 for []', function () {
         expect(app.findMinMax([])).toEqual(0);
       });
-
+      it('should return [4] for [4]', function () {
+        expect(app.findMinMax([4])).toEqual([4]);
+      });
 
     });
 
@@ -46,7 +48,9 @@ var app = require("../max-min-number-lab/max-min-number-lab.js");
       it("should return `Invalid Argument` for a float 10.5", function() {
         expect(app.findMinMax(10.5)).toEqual('Invalid Argument');
       });
-      
+      it("should return `Invalid Argument` for a negative integer -1", function() {
+        expect(app.findMinMax(-1)).toEqual('Invalid Argument');
+      });
     });
 
   });
