@@ -38,3 +38,15 @@ describe("Fizz Buzz tests ", function() {
   });
 
 });
+describe("Return invalid argument when a non-integer argument is pass", function() {
+
+      it("should return `Invalid Argument` for 'string'", function() {
+        expect(app.fizzBuzz('string')).toEqual('Invalid Argument');
+      });
+
+      it("should return `Invalid Argument` for float 5.2", function() {
+        expect(app.fizzBuzz(5.2)).toEqual('Invalid Argument');
+      });
+
+      
+    });

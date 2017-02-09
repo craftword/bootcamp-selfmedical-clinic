@@ -29,6 +29,20 @@ var app = require("../max-min-number-lab/max-min-number-lab.js");
       });
 
     });
+  describe("Return invalid argument when a non-array argument is pass", function() {
+
+      it("should return `Invalid Argument` for 'string'", function() {
+        expect(app.findMinMax('string')).toEqual('Invalid Argument');
+      });
+
+      it("should return `Invalid Argument` for Integer 78", function() {
+        expect(app.findMinMax(78)).toEqual('Invalid Argument');
+      });
+      it("should return `Invalid Argument` for a float 10.5", function() {
+        expect(app.findMinMax(10.5)).toEqual('Invalid Argument');
+      });
+      
+    });
 
   });
 
